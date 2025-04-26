@@ -4,21 +4,24 @@ from uuid import UUID
 from typing import Optional, Literal
 
 
-class UserSchemaBase(BaseModel):
-    id: UUID
+class UserCreateSchema(BaseModel):
     name: str
     email: str
     birthday: date
     description: Optional[str] = None
+
+
+class UserCreatedSchema(BaseModel):
+    id: str
+
+
+class UserDeletedSchema(BaseModel):
+    id: str
+
+class UserSearchedSchema(UserCreateSchema):
+    id: UUID
     created_at: datetime
 
-
-class UserCreateSchema(UserSchemaBase):
-    created_at: Literal[None] = None
-
-
-class UserSearchedSchema(UserSchemaBase):
-    pass
 
 
 class UserFilterSchema(BaseModel):
