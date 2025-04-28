@@ -3,8 +3,8 @@ import sys
 from fastapi import FastAPI, Request
 from loguru import logger
 
-from app.database import Base, engine
-from app.router import user_route
+from database import Base, engine
+from router import user_route
 
 logger.remove(0)
 logger.add(sys.stderr, level="DEBUG")

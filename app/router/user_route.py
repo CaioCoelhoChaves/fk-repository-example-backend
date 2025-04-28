@@ -1,10 +1,10 @@
 from sqlalchemy.exc import NoResultFound
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.exceptions import not_found_exception
-from app.exceptions.exceptions import not_found_exception_doc
-from app.repository import UserRepository
-from app.schema import UserSearchedSchema, UserFilterSchema, UserCreateSchema, UserCreatedSchema, UserDeletedSchema
+from database import get_db
+from exceptions import not_found_exception
+from exceptions.exceptions import not_found_exception_doc
+from repository import UserRepository
+from schema import UserSearchedSchema, UserFilterSchema, UserCreateSchema, UserCreatedSchema, UserDeletedSchema
 from fastapi import APIRouter, Depends, Query, HTTPException
 from typing import Annotated, List
 from loguru import logger

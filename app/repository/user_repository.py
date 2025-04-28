@@ -1,7 +1,7 @@
 from sqlalchemy import ColumnElement
 from sqlalchemy.orm import Session
-from app.models import User
-from app.schema import UserFilterSchema, UserSearchedSchema, UserCreateSchema, UserCreatedSchema, UserDeletedSchema
+from models import User
+from schema import UserFilterSchema, UserSearchedSchema, UserCreateSchema, UserCreatedSchema, UserDeletedSchema
 from typing import List, cast
 
 
